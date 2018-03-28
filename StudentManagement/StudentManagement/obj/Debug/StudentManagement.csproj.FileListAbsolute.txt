@@ -1,0 +1,15 @@
+D:\C#\sourcegui\StudentManagement\StudentManagement\bin\Debug\StudentManagement.exe.config
+D:\C#\sourcegui\StudentManagement\StudentManagement\bin\Debug\StudentManagement.exe
+D:\C#\sourcegui\StudentManagement\StudentManagement\bin\Debug\StudentManagement.pdb
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.frmLogin.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.frmMain.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.Properties.Resources.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.GenerateResource.Cache
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.exe
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.pdb
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.frmStudent.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.Batches.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.frmUserInfo.resources
+D:\C#\sourcegui\StudentManagement\StudentManagement\obj\Debug\StudentManagement.frmUsers.resources

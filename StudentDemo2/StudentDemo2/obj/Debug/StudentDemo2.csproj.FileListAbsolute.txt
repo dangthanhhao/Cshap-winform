@@ -1,0 +1,11 @@
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\bin\Debug\StudentDemo2.exe.config
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\bin\Debug\StudentDemo2.exe
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\bin\Debug\StudentDemo2.pdb
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.frmMain.resources
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.Properties.Resources.resources
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.csproj.GenerateResource.Cache
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.exe
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.pdb
+D:\C#\sourcegui\StudentDemo2\StudentDemo2\obj\Debug\StudentDemo2.frmStudentInfo.resources

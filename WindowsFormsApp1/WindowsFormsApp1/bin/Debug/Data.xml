@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfStudent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Student>
+    <name>a</name>
+    <age>0</age>
+    <address>1</address>
+    <Sclass>1</Sclass>
+  </Student>
+  <Student>
+    <name>A</name>
+    <age>0</age>
+    <address>A</address>
+    <Sclass>A</Sclass>
+  </Student>
+  <Student>
+    <name>Q</name>
+    <age>0</age>
+    <address>Q</address>
+    <Sclass>Q</Sclass>
+  </Student>
+  <Student>
+    <name>d</name>
+    <age>12</age>
+    <address>d</address>
+    <Sclass>d</Sclass>
+  </Student>
+</ArrayOfStudent>

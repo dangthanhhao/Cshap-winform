@@ -1,0 +1,11 @@
+D:\C#\sourcegui\WinformSolution1\FormExample\bin\Debug\FormExample.exe.config
+D:\C#\sourcegui\WinformSolution1\FormExample\bin\Debug\FormExample.exe
+D:\C#\sourcegui\WinformSolution1\FormExample\bin\Debug\FormExample.pdb
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.frmMain.resources
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.Properties.Resources.resources
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.csproj.GenerateResource.Cache
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.exe
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.pdb
+D:\C#\sourcegui\WinformSolution1\FormExample\obj\Debug\FormExample.FrmAddProduct.resources

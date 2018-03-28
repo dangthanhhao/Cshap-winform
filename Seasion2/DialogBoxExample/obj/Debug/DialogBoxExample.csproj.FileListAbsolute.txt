@@ -1,0 +1,10 @@
+D:\C#\sourcegui\Seasion2\DialogBoxExample\bin\Debug\DialogBoxExample.exe.config
+D:\C#\sourcegui\Seasion2\DialogBoxExample\bin\Debug\DialogBoxExample.exe
+D:\C#\sourcegui\Seasion2\DialogBoxExample\bin\Debug\DialogBoxExample.pdb
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.Form1.resources
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.Properties.Resources.resources
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.csproj.GenerateResource.Cache
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.exe
+D:\C#\sourcegui\Seasion2\DialogBoxExample\obj\Debug\DialogBoxExample.pdb

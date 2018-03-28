@@ -1,0 +1,10 @@
+D:\C#\sourcegui\MenuExample\MenuExample\bin\Debug\MenuExample.exe.config
+D:\C#\sourcegui\MenuExample\MenuExample\bin\Debug\MenuExample.exe
+D:\C#\sourcegui\MenuExample\MenuExample\bin\Debug\MenuExample.pdb
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.Form1.resources
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.Properties.Resources.resources
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.csproj.GenerateResource.Cache
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.exe
+D:\C#\sourcegui\MenuExample\MenuExample\obj\Debug\MenuExample.pdb

@@ -1,0 +1,11 @@
+D:\C#\sourcegui\GDI+Example\MyIDM\bin\Debug\MyIDM.exe.config
+D:\C#\sourcegui\GDI+Example\MyIDM\bin\Debug\MyIDM.exe
+D:\C#\sourcegui\GDI+Example\MyIDM\bin\Debug\MyIDM.pdb
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.frmMain.resources
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.Properties.Resources.resources
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.csproj.GenerateResource.Cache
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.exe
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.pdb
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\GDI+Example\MyIDM\obj\Debug\MyIDM.frmAddURL.resources

@@ -1,0 +1,10 @@
+D:\C#\sourcegui\SalesApp\SalesApp\bin\Debug\SalesApp.exe.config
+D:\C#\sourcegui\SalesApp\SalesApp\bin\Debug\SalesApp.exe
+D:\C#\sourcegui\SalesApp\SalesApp\bin\Debug\SalesApp.pdb
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.Form1.resources
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.Properties.Resources.resources
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.csproj.GenerateResource.Cache
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.exe
+D:\C#\sourcegui\SalesApp\SalesApp\obj\Debug\SalesApp.pdb

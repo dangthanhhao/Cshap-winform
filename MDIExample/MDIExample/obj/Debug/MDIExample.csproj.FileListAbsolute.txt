@@ -1,0 +1,11 @@
+D:\C#\sourcegui\MDIExample\MDIExample\bin\Debug\MDIExample.exe.config
+D:\C#\sourcegui\MDIExample\MDIExample\bin\Debug\MDIExample.exe
+D:\C#\sourcegui\MDIExample\MDIExample\bin\Debug\MDIExample.pdb
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.csprojResolveAssemblyReference.cache
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.frmEditText.resources
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.frmMain.resources
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.Properties.Resources.resources
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.csproj.GenerateResource.Cache
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.csproj.CoreCompileInputs.cache
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.exe
+D:\C#\sourcegui\MDIExample\MDIExample\obj\Debug\MDIExample.pdb
