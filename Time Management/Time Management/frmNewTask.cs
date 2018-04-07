@@ -11,9 +11,12 @@ namespace Time_Management
 {
     public partial class frmNewTask : Form
     {
-        public frmNewTask()
+        private Work congviec;
+        public frmNewTask(Work congviec)
         {
             InitializeComponent();
+            this.congviec = congviec;
+            bindingSource1.DataSource = congviec;
         }
 
 
@@ -23,6 +26,7 @@ namespace Time_Management
             pnVienMedium.BackColor = SystemColors.Control;
             pnVienUsual.BackColor = SystemColors.Control;
             lbImportant.Text = "Quan trọng";
+            
         }
 
         private void pnMedium_Click(object sender, EventArgs e)
@@ -60,5 +64,57 @@ namespace Time_Management
                 lbTimeNoti.Enabled = false;
             }
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLapLai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmNewTask_Load(object sender, EventArgs e)
+        {
+            
+            checkBox1.DataBindings.Add("Checked", congviec, "IsNoti");
+            if (!String.IsNullOrEmpty(congviec.Name))
+            {
+                if (congviec.Important.Equals("Quan trọng"))
+                {
+                    pnImportant_Click(sender, e);
+                }
+                if (congviec.Important.Equals("Thường ngày"))
+                {
+                    pnMedium_Click(sender, e);
+                }
+                if (congviec.Important.Equals("Đã hoàn thành"))
+                {
+                    pnUsual_Click(sender, e);
+                }
+            }
+            else pnImportant_Click(sender, e); 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Phải có tên công việc!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox1.Focus();
+
+            }
+            else
+            {
+                congviec.Important = lbImportant.Text;
+                congviec.Date = dateTimePicker1.Value;
+                MessageBox.Show(congviec.Date.Date.ToShortDateString());
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+
     }
 }

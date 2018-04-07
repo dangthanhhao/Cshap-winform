@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -19,14 +21,10 @@ namespace Time_Management
         }
         
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            frmNewTask f1 = new frmNewTask();
-            f1.ShowDialog();
-        }
+        
         #region Peoperties
         private List<List<Button>> matrix;
-
+        public static List<Work> listCongViec;
         public List<List<Button>> Matrix
         {
             get { return matrix; }
@@ -48,6 +46,7 @@ namespace Time_Management
                 {
                     Button btn = new Button() { Width = Cons.dateButtonWidth, Height = Cons.dateButtonHeight };
                     btn.Location = new Point(oldBtn.Location.X + oldBtn.Width + Cons.margin, oldBtn.Location.Y);
+                    btn.Click += btn_Click;
 
                     pnlMatrix.Controls.Add(btn);
                     Matrix[i].Add(btn);
@@ -58,6 +57,14 @@ namespace Time_Management
             }
 
             SetDefaultDate();
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty((sender as Button).Text))
+                return;
+            //DailyPlan daily = new DailyPlan(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as Button).Text)), Job);
+            //daily.ShowDialog();
         }
 
         int DayOfMonth(DateTime date)
@@ -134,10 +141,48 @@ namespace Time_Management
         {
             dtpkDate.Value = DateTime.Now;
         }
-
+        List<Work> sourceListView;
         private void dtpkDate_ValueChanged(object sender, EventArgs e)
         {
             AddNumberIntoMatrixByDate((sender as DateTimePicker).Value);
+            loadListView();
+            
+
+        }
+
+        private void loadListView()
+        {
+            if (listCongViec != null)
+            {
+                sourceListView = listCongViec.Where(p => isEqualDate(p.Date, dtpkDate.Value)).ToList();
+                if (sourceListView != null)
+                {
+                    listView1.Items.Clear();
+
+                    foreach (var item in sourceListView)
+                    {
+                        int imageindex;
+                        switch (item.Important)
+                        {
+                            case "Quan trọng":
+                                imageindex = 0;
+                                break;
+                            case "Thường ngày":
+                                imageindex = 1;
+                                break;
+                            case "Đã hoàn thành":
+                                imageindex = 2;
+                                break;
+                            default:
+                                imageindex = 0;
+                                break;
+                        }
+                        var x = listView1.Items.Add(item.Date.ToShortTimeString(), imageindex);
+                        x.SubItems.Add(item.Name);
+                    }
+
+                }
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -156,10 +201,7 @@ namespace Time_Management
         }
 
         #endregion
-        private void pnlMatrix_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -169,20 +211,69 @@ namespace Time_Management
             imageList.Images.Add(global::Time_Management.Properties.Resources.usual);
             imageList.Images.Add(global::Time_Management.Properties.Resources.done);
             listView1.SmallImageList = imageList;
-            var x = listView1.Items.Add("Hao",1);
-            x.SubItems.Add("A");
+            listView1.Columns[1].Width = -2;
+            
+
+            try
+            {
+                LoadJson();
+            }
+            catch
+            {
+                
+            }
+            if (listCongViec==null)
+            {
+                listCongViec = new List<Work>();
+            }
+
+            loadListView();
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmNewTask f = new frmNewTask();
-            f.ShowDialog();
+            /* Work a = new Work("Hào", "Đặng Thanh Hào", "Hàng tháng", "Gia đình", "Quan trọng", new DateTime(1998, 04, 04), "Trong ngày", true);
+             frmNewTask f = new frmNewTask(a);
+             f.ShowDialog();
+             SaveJson(a);*/
+
+            Work a = new Work();
+            var x = new frmNewTask(a).ShowDialog();
+            if (x == DialogResult.OK)
+            {
+                listCongViec.Add(a);
+                SaveJson();
+                MessageBox.Show("Thêm công việc thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+        static void SaveJson()
+        {
+            string data = JsonConvert.SerializeObject(listCongViec);
+            if (!Directory.Exists("data")) Directory.CreateDirectory("data");
+
+            File.WriteAllText(Application.StartupPath+"/data/Data.json", data);
+        }
+        void LoadJson()
+        {
+            if (!File.Exists(Application.StartupPath + "/data/Data.json"))
+            {
+                return;
+            }
+            string data = File.ReadAllText(Application.StartupPath + "/data/Data.json");
+            listCongViec = JsonConvert.DeserializeObject<List<Work>>(data);
+        }
+    
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
