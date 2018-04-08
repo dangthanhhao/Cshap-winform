@@ -65,16 +65,7 @@ namespace Time_Management
             }
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblLapLai_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void frmNewTask_Load(object sender, EventArgs e)
         {
             
@@ -94,7 +85,10 @@ namespace Time_Management
                     pnUsual_Click(sender, e);
                 }
             }
-            else pnImportant_Click(sender, e); 
+            else pnImportant_Click(sender, e);
+            textBox1.SelectedText = "";
+            textBox1.Focus();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,7 +103,8 @@ namespace Time_Management
             {
                 congviec.Important = lbImportant.Text;
                 congviec.Date = dateTimePicker1.Value;
-                MessageBox.Show(congviec.Date.Date.ToShortDateString());
+              
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

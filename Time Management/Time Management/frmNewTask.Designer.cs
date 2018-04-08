@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewTask));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.lbTimeNoti = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,12 +54,11 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnVienUsual.SuspendLayout();
             this.pnVienMedium.SuspendLayout();
             this.pnVienImportant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,15 +73,18 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy hh:mm:ss";
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "Date", true));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(196, 23);
-            this.dateTimePicker1.TabIndex = 1;
-            
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = typeof(Time_Management.Work);
             // 
             // label2
             // 
@@ -119,7 +123,7 @@
             this.textBox1.Location = new System.Drawing.Point(131, 17);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(571, 23);
-            this.textBox1.TabIndex = 4;
+            this.textBox1.TabIndex = 1;
             // 
             // cbbTimeNoti
             // 
@@ -135,7 +139,7 @@
             this.cbbTimeNoti.Location = new System.Drawing.Point(581, 144);
             this.cbbTimeNoti.Name = "cbbTimeNoti";
             this.cbbTimeNoti.Size = new System.Drawing.Size(121, 24);
-            this.cbbTimeNoti.TabIndex = 5;
+            this.cbbTimeNoti.TabIndex = 7;
             // 
             // label5
             // 
@@ -156,7 +160,6 @@
             this.lblLapLai.Size = new System.Drawing.Size(50, 17);
             this.lblLapLai.TabIndex = 2;
             this.lblLapLai.Text = "Lặp lại";
-            this.lblLapLai.Click += new System.EventHandler(this.lblLapLai_Click);
             // 
             // cbbLapLai
             // 
@@ -173,7 +176,7 @@
             this.cbbLapLai.Location = new System.Drawing.Point(582, 101);
             this.cbbLapLai.Name = "cbbLapLai";
             this.cbbLapLai.Size = new System.Drawing.Size(121, 24);
-            this.cbbLapLai.TabIndex = 5;
+            this.cbbLapLai.TabIndex = 6;
             // 
             // groupBox1
             // 
@@ -271,8 +274,7 @@
             this.comboBox3.Location = new System.Drawing.Point(131, 98);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(154, 24);
-            this.comboBox3.TabIndex = 5;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.TabIndex = 3;
             // 
             // textBox3
             // 
@@ -282,7 +284,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(373, 92);
-            this.textBox3.TabIndex = 7;
+            this.textBox3.TabIndex = 4;
             // 
             // checkBox1
             // 
@@ -293,7 +295,7 @@
             this.checkBox1.Location = new System.Drawing.Point(608, 61);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(111, 21);
-            this.checkBox1.TabIndex = 8;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Bật nhắc nhở";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -304,7 +306,7 @@
             this.button1.Location = new System.Drawing.Point(167, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 42);
-            this.button1.TabIndex = 9;
+            this.button1.TabIndex = 8;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -319,10 +321,6 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(Time_Management.Work);
             // 
             // frmNewTask
             // 
@@ -346,17 +344,18 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNewTask";
             this.Text = "Chi tiết công việc";
             this.Load += new System.EventHandler(this.frmNewTask_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnVienUsual.ResumeLayout(false);
             this.pnVienMedium.ResumeLayout(false);
             this.pnVienImportant.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
