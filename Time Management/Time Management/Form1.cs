@@ -528,10 +528,10 @@ namespace Time_Management
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    x *= 60000;
+                    x *= 24 * 60000;
                     break;
                 case 1:
-                    x *= 24 * 60000;
+                    x *=  60000;
                     break;
                 default:
                     x *= 1000;
@@ -632,7 +632,8 @@ namespace Time_Management
 
         private void button13_Click(object sender, EventArgs e)
         {
-            string str = "Chương trình quản lí lịch công việc.\r\nSản phẩm cuối kì môn công nghệ phần mềm.\r\n Được phát triển bởi nhóm BCS:\r\nĐặng Thanh Hào, Lê Huy TRuyền, Võ Nguyễn Hoàng Phi, Ung Thị Thùy Oanh, Lê Đức Hoàng-16CNTT3, Hồ Trí Viễn 15CNTT2\r\nTrường Đại học Sư phạm, Đại học Đà Nẵng";
+            string str = "Chương trình quản lí lịch công việc.\r\nSản phẩm cuối kì môn công nghệ phần mềm.\r\nĐược phát triển bởi nhóm BCS:\r\nĐặng Thanh Hào " +
+                "- 16CNTT3\r\nLê Huy TRuyền - 16CNTT3\r\nVõ Nguyễn Hoàng Phi - 16CNTT3\r\nUng Thị Thùy Oanh - 16CNTT3\r\nĐặng Lê Hoàng - 16CNTT3\r\nHồ Trí Viễn - 15CNTT2\r\nTrường Đại học Sư phạm, Đại học Đà Nẵng";
             MessageBox.Show(str, "About us", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -640,7 +641,8 @@ namespace Time_Management
         {
             button4.PerformClick();
         }
-    }
+}
+ 
 }
 
    
