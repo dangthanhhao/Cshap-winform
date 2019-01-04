@@ -70,6 +70,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.button13 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -538,6 +539,16 @@
             this.label13.TabIndex = 2;
             this.label13.Text = "Thông tin tác giả";
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(580, 527);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 15;
+            this.button14.Text = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -545,6 +556,7 @@
             this.BackgroundImage = global::Time_Management.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1076, 579);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBox2);
@@ -633,6 +645,7 @@
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button14;
     }
 }
 

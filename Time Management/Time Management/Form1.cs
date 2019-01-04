@@ -337,7 +337,7 @@ namespace Time_Management
             AddNumberIntoMatrixByDate(dtpkDate.Value);
             loadListView();
             listView1.SelectedItems.Clear();
-            MessageBox.Show("Xóa công việc thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Xóa công việc thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private Work GetWorkFromListView()
         {
@@ -462,10 +462,12 @@ namespace Time_Management
         {
             notifyIcon1.BalloonTipText = "";
            // btnToDay_Click(sender,e);
-            var today = listCongViec.Where(p => p.Important != "Đã hoàn thành" &&isEqualDate(DateTime.Now,p.Date)).ToList();
+            var today = listCongViec.Where(p => p.Important!="Đã hoàn thành" &&isEqualDate(DateTime.Now,p.Date)).ToList();
+            
             bool check = false;
             foreach (var item in today)
             {
+                
                 if (item.Date<DateTime.Now&&item.Recurrence=="1 lần")
                 {
                     item.Important = "Đã hoàn thành";
@@ -482,7 +484,7 @@ namespace Time_Management
             }
 
             var listtoday = today.Where(p => p.Important != "Đã hoàn thành" && p.IsNoti&&p.Date>=DateTime.Now).OrderBy(p => p.Date).ToList();
-            var listfeauture = listCongViec.Where(p => p.Date > DateTime.Now && p.IsNoti && p.TimeNotify != "Trong ngày"&&!string.IsNullOrEmpty(p.TimeNotify)&&p.early(DateTime.Now)).ToList();
+            var listfeauture = listCongViec.Where( p => p.Important != "Đã hoàn thành" && p.Date > DateTime.Now && p.IsNoti && p.TimeNotify != "Trong ngày"&&!string.IsNullOrEmpty(p.TimeNotify)&&p.early(DateTime.Now)).ToList();
             
             if (listtoday.Count>0)
             {
@@ -641,7 +643,13 @@ namespace Time_Management
         {
             button4.PerformClick();
         }
-}
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Test t = new Test();
+            t.Show();
+        }
+    }
  
 }
 

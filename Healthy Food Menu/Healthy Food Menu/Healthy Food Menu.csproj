@@ -4,27 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55F8BF94-EFA5-4023-ACF4-3535512AEA6D}</ProjectGuid>
+    <ProjectGuid>{62C0DF4C-828C-44FB-AB13-0C4299B7EAF5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Time_Management</RootNamespace>
-    <AssemblyName>Time Management</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>Healthy_Food_Menu</RootNamespace>
+    <AssemblyName>Healthy Food Menu</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,11 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Calendar.ico</ApplicationIcon>
+    <ApplicationIcon>list_7Bk_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,38 +46,60 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appsetting.cs" />
-    <Compile Include="Cons.cs" />
+    <Compile Include="BMI cal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BMI cal.Designer.cs">
+      <DependentUpon>BMI cal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditData.Designer.cs">
+      <DependentUpon>EditData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDetail.Designer.cs">
+      <DependentUpon>EditDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Food.cs" />
+    <Compile Include="FoodGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodGen.Designer.cs">
+      <DependentUpon>FoodGen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewTask.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNewTask.Designer.cs">
-      <DependentUpon>frmNewTask.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Work.cs" />
+    <EmbeddedResource Include="BMI cal.resx">
+      <DependentUpon>BMI cal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditData.resx">
+      <DependentUpon>EditData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDetail.resx">
+      <DependentUpon>EditDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodGen.resx">
+      <DependentUpon>FoodGen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmNewTask.resx">
-      <DependentUpon>frmNewTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,11 +111,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Work.datasource" />
+    <None Include="Properties\DataSources\Food.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,71 +124,40 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Email.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\done.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\important.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\usual.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Exit.png" />
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sự-kiện-ưa-thích.png" />
+    <None Include="Resources\unnamed.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\List.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Meeting.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logout.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Logout1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button-Next-icon1.png" />
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button_next_89675.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Calendar.png" />
+    <None Include="Resources\add-1-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Work.png" />
+    <None Include="Resources\Delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\Logout.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sáng-kiến.png" />
+    <None Include="Resources\tải xuống.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Calendar.ico" />
+    <None Include="Resources\Exit.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <Content Include="list_7Bk_icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
